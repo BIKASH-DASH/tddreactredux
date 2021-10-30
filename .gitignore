@@ -6,6 +6,7 @@
 .pnp.js
 
 *.js.snap
+yarn.lock
 # testing
 /coverage
 
