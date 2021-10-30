@@ -12,4 +12,18 @@ describe('balance Reducer', () => {
         const balance = 10;
         expect(BalanceReducer(undefined,{type:'',payload:balance})).toEqual(0);
     });
+
+    it('should deposit the balance', () => {
+        const deposit = 10;
+        const initState = 5;
+        expect(BalanceReducer(initState,{type:constants.DEPOSIT,payload:deposit})).toEqual(deposit+initState)
+    });
+
+    it('should with draw balance', () => {
+        const balance = 30;
+        const withDrawBalance =5;
+        expect(BalanceReducer(balance,{type:constants.WITHDRAW,payload:withDrawBalance})).toEqual(balance-withDrawBalance)
+    });
+
+  
 });

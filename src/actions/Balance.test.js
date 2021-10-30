@@ -10,3 +10,22 @@ it('should create an action set the balance', () => {
     const expectedAction = {type:constants.SET_BALANCE,payload:balance}
     expect(actions.setBalance(balance) ).toEqual(expectedAction)
 });
+
+
+it('should create a deposit into balance', () => {
+    const deposit = 10;
+    const depositAction = {
+        type:constants.DEPOSIT,
+        payload:deposit
+    }
+    expect(actions.deposit(deposit)).toEqual(depositAction);
+});
+
+it('create a action to withdraw balance ', () => {
+    const withDraw = 10;
+    const expectedAction = {
+        type:constants.WITHDRAW,
+        payload:withDraw
+    }
+    expect(actions.withDraw(withDraw)).toEqual(expectedAction);
+});

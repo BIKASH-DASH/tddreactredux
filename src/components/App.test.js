@@ -10,4 +10,7 @@ describe('Name of the group', () => {
     it('should render properly', () => {
         expect(wrapper).toMatchSnapshot();
     });
+    it('should contain a Wallet component', () => {
+        expect(wrapper.find('Connect(Wallet)').exists()).toBe(true);
+    });
 });
